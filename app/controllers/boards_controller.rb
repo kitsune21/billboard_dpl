@@ -1,18 +1,18 @@
 class BoardsController < ApplicationController
   def index
-    @boards = board.ApplicationController
+    @boards = Board.all
   end
 
   def show
-    @board = board.find(params[:id])
+    @board = Board.find(params[:id])
   end
 
   def new
-    @board = board.new
+    @board = Board.new
   end
 
   def create
-    @board = board.new(board_params)
+    @board = Board.new(board_params)
     if @board.save
       redirect_to boards_path
     else
@@ -21,11 +21,11 @@ class BoardsController < ApplicationController
   end
 
   def edit
-    @board = board.find(params[:id])
+    @board = Board.find(params[:id])
   end
 
   def update
-    @board = board.find(params[:id])
+    @board = Board.find(params[:id])
     if @board.update(board_params)
       redirect_to boards_path
     else
@@ -34,7 +34,7 @@ class BoardsController < ApplicationController
   end
 
   def destroy
-    board.find(params[:id]).destroy
+    Board.find(params[:id]).destroy
     redirect_to boards_path
   end
 
