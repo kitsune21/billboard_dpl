@@ -1,5 +1,16 @@
-<h1>Boards#new</h1>
-<p>Find me in app/views/boards/new.html.erb</p>
+<h1>Create an Entry</h1>
+<%= form_for @board do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+
+  <%= f.label :artist %>
+  <%= f.text_field :artist %>
+
+  <%= f.label :body %>
+  <%= f.text_area :body%>
+
+  <%= f.submit %>
+<% end %>
 
 
 
