@@ -1,0 +1,6 @@
+<h1><%= @board.name %> - <%= @song.name %></h1>
+<p>Artist: <%= @song.artist %></p>
+<p>Played <%= @song.plays %> times</p>
+<%= link_to 'Edit Song', edit_board_song_path([@board, @song]) %>
+<%= button_to 'Delete Song', [@board, @song], method: :delete %>
+<%= link_to 'Back To Billboard', boards_path(@board) %>

@@ -1,0 +1,10 @@
+<h1>Songs for <%= @board.name %></h1>
+
+<%= link_to 'Add Songs', new_board_song_path(@board) %>
+
+<ul>
+  <% @songs.each do |song| %>
+    <li><%= link_to song.name, [@board, song] %></li>
+  <% end %>
+</ul>
+

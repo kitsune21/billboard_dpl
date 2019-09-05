@@ -1,0 +1,6 @@
+<h1><%= @board.name %></h1>
+
+
+<%= link_to 'View Songs', board_songs_path(@board) %>
+<%= link_to 'Edit Billboard', edit_board_path(@board) %>
+<%= button_to 'Delete Billboard', @board, method: :delete %>
