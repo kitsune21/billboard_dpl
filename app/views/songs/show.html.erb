@@ -1,5 +1,5 @@
 <h1><%= @board.name %> - <%= @song.name %></h1>
-<p>Artist: <%= @song.artist %></p>
+<p>Artist: <%= @song.artist.name %></p>
 <%= link_to 'Add Artist', new_song_artist_path(@song)%>
 <p>Played <%= @song.plays %> times</p>
 <%= link_to 'Edit Song', edit_board_song_path([@board, @song]) %>
